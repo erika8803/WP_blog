@@ -1,4 +1,12 @@
 <?php
+ /* ---------------------------------------
+テーマタグ設定
+--------------------------------------- */
+function init_func() {
+    add_theme_support('title-tag');
+}
+add_action('init', 'init_func');
+
 /* ---------------------------------------
 管理バー表示オフ設定
 --------------------------------------- */
@@ -94,4 +102,6 @@ function column_posts($query) {
     }
 }
 add_action('pre_get_posts','column_posts');
+
+
 

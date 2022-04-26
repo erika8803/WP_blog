@@ -7,7 +7,7 @@ Theme Name: Erikablog
 body {
     width: 100%;
     font-size: 18px;
-    color: gray;
+    color: black;
     margin: 0;
     font-family: sans-serif;
     line-height: 1.5em;
@@ -151,7 +151,6 @@ front-page
 }
 .card-image img{
     width: 100%;
-    height: 50%;
     display: block;
     text-align: center;
 }
@@ -238,13 +237,21 @@ single
 .post-thumbnail-image {
     text-align: center;
     padding-bottom: 1em;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .post-contents{
     margin: 0 auto;
     width: 60%;
 }
-.single img {
-    width: 100%;
+.post-title {
+    text-align: center;
+    padding: 1.5em;
+}
+.post-text {
+    padding: 2em;
 }
 .single .post-date-category {
     font-size: 16px;
@@ -275,7 +282,7 @@ footer {
     
     /* header */
     .header-title-area {
-        padding-left: 2em;
+        padding: 1em 0 1em 2em;
     }
     .logo {
         padding-left: 0; 
@@ -304,13 +311,21 @@ footer {
     .text-title:after {
         margin: 0;
     }
+    .card-image img{
+        height: 50%;
+    }
     .card-list {
         width: 100%;
 		margin-left: 0.45em;
     }
-    .card-title {
-        margin: 0;
+	.card-title {
+        padding: 2em 0;
     }
+    .blog .card-title {
+        padding-left: 0em;
+        width: 100%;
+    }
+
     .data {
         font-size: 12px;
     }
@@ -329,12 +344,40 @@ footer {
         padding: 0;
     }
     .post-image {
-        display: flex;
+        width: 100%;
+        height: 50%;
+        display: block;
+        text-align: center;
     }
+	.archive .card {
+        display: block;
+        padding-bottom: 0;
+	}
 
     /* single */
     .post-contents {
-        width: 90%; 
+        width: 100%;
+    }
+    .post-thumbnail-image {
+        text-align: center;
+        padding-bottom: 1em;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .post-title {
+        text-align: center;
+        padding: 0;
+        line-height: 1.2em;
+    }
+    .post-text {
+        padding: 0 1em;
+    }
+
+    .archive .card-contents {
+        margin: 0 auto;
+        width: 95%;
     }
     .single {
         margin: 0 auto;
@@ -344,15 +387,19 @@ footer {
     .contents .profile {
         margin: 1em;
     }
-    
-    .post-thumbnail-image img {
-        width: 100%;
-        height: 100%;
+    .pagination {
+        padding: 2em;
     }
-
-
 
     .icon li {
         padding: 0 0.5em;
+    }
+
+    /* footer */
+    footer {
+        padding: 0.1em;
+    }
+    .copyright {
+        font-size: 14px;
     }
 }
